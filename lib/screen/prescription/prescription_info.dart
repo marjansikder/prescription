@@ -366,7 +366,7 @@ class _PrescriptionInfoScreenState extends State<PrescriptionInfoScreen> {
               ));
             },
             icon: const Icon(
-              Icons.print,
+              Icons.picture_as_pdf_sharp,
               color: Colors.white,
             ),
           ),

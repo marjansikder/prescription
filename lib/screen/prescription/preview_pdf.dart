@@ -59,10 +59,23 @@ class _PdfPreviewScreenState extends State<PdfPreviewScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(200, 100, 100, 200),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            // Handle back button press
+            Navigator.pop(context);
+          },
+        ),
         title: const Text(
           'Prescription view',
-          style: TextStyle(fontFamily: 'NotoSans', fontSize: 24.5, fontWeight: FontWeight.w900, color: Colors.white),
+          style: TextStyle(
+            fontFamily: 'NotoSans',
+            fontSize: 24.5,
+            fontWeight: FontWeight.w900,
+            color: Colors.white,
+          ),
         ),
+        centerTitle: true, // Centers the title in the AppBar
       ),
       body: Container(
         color: Colors.grey[200], // Replace with AppColors.kBackgroundColor.
