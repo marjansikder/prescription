@@ -83,13 +83,10 @@ class _PrescriptionInfoScreenState extends State<PrescriptionInfoScreen> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.5,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: HtmlEditor(
                       controller: htmlEditorController,
-                      htmlEditorOptions: HtmlEditorOptions(
-                          hint: 'Your text here...', shouldEnsureVisible: true, initialText: currentContent
-                          //initialText: "<p>text content initial, if any</p>",
-                          ),
+                      htmlEditorOptions: HtmlEditorOptions(initialText: currentContent, hint: 'Type here'),
                       htmlToolbarOptions: HtmlToolbarOptions(
                         toolbarPosition: ToolbarPosition.belowEditor,
                         toolbarType: ToolbarType.nativeScrollable,
@@ -338,7 +335,7 @@ class _PrescriptionInfoScreenState extends State<PrescriptionInfoScreen> {
                       ),
                     ),*/
                   ],
-                )
+                ),
               ],
             ),
           ),
